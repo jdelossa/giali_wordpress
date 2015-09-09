@@ -40,6 +40,7 @@ function sci_init() {
 	include( SCI_DIR . '/inc/widgets/contact-googlemaps-widget.php' );
 	include( SCI_DIR . '/inc/widgets/contact-address-widget.php' );
 	include( SCI_DIR . '/inc/widgets/contact-info-widget.php' );
+    include( SCI_DIR . '/inc/widgets/contact-info-widget-2.php' );
 }
 add_action( 'plugins_loaded', 'sci_init' );
 

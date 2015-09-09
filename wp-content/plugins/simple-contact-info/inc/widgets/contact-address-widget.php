@@ -53,10 +53,6 @@ class SCI_Address_Widget extends WP_Widget {
 		?>
 			<div class="sci-address">
 				<?php if ( !empty( $street ) ) : ?><p class="sci-address-street"><?php echo $street; ?></p><?php endif; ?>
-				<?php if ( !empty( $city ) ) : ?><p class="sci-address-city"><?php echo $city; ?></p><?php endif; ?>
-				<?php if ( !empty( $state ) ) : ?><p class="sci-address-state"><?php echo $state; ?></p><?php endif; ?>
-				<?php if ( !empty( $country ) ) : ?><p class="sci-address-country"><?php echo $country; ?></p><?php endif; ?>
-				<?php if ( !empty( $zip ) ) : ?><p class="sci-address-zip"><?php echo $zip; ?></p><?php endif; ?>
 			</div>
 		<?php
 	}

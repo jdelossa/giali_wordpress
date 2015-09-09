@@ -4,17 +4,17 @@ if ( !defined('ABSPATH') ) {
 	exit();
 }
 
-class SCI_Info_Widget extends WP_Widget {
+class SCI_Info_Widget_2 extends WP_Widget {
 
 	function __construct() {
 		$params = array(
-			'name' 			=> 'Simple Contact Info Office 1',
+			'name' 			=> 'Simple Contact Info Office 2',
 			'description' 	=> __( 'Displays contact (address, phone, fax, email) information.', 'simple-contact-info' ),
 		);
 
 		add_action( 'sci_updated_info', array( $this, 'delete_cache' ) );
 
-		parent::__construct( 'SCI_Info_Widget', '', $params );
+		parent::__construct( 'SCI_Info_Widget_2', '', $params );
 	}
 
 	public function form( $instance ) {
@@ -119,11 +119,11 @@ class SCI_Info_Widget extends WP_Widget {
 	public function display_elements( $instance ) {
 		extract( $instance );
 
-        $street 	= get_option( 'qs_contact_street' );
-		$phone 		= get_option( 'qs_contact_phone' );
-		$mob_phone 	= get_option( 'qs_contact_mob_phone' );
-		$fax 		= get_option( 'qs_contact_fax' );
-		$email		= get_option( 'qs_contact_email' ); ?>
+        $street 	= get_option( 'qs_contact_street2' );
+		$phone 		= get_option( 'qs_contact_phone2' );
+		$mob_phone 	= get_option( 'qs_contact_mob_phone2' );
+		$fax 		= get_option( 'qs_contact_fax2' );
+		$email		= get_option( 'qs_contact_email2' ); ?>
 		<div class="sci-contact">
             <div class="sci-address">
                 <?php if ( !empty( $street ) ) : ?><p class="sci-address-street"><?php echo $street; ?></p><?php endif; ?>
@@ -199,7 +199,7 @@ class SCI_Info_Widget extends WP_Widget {
 }
 
 // Load the widget on widgets_init
-function sci_widget_info_init() {
-	register_widget( 'SCI_Info_Widget' );
+function sci_widget_info_init_2() {
+	register_widget( 'SCI_Info_Widget_2' );
 }
-add_action( 'widgets_init', 'sci_widget_info_init' );
+add_action( 'widgets_init', 'sci_widget_info_init_2' );
